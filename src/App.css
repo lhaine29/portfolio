@@ -1,38 +1,291 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Itim&family=Montserrat&family=Roboto&display=swap');
+* {
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    align-items: center;
+    background: #EEEEEE;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Ensures space between image and menu */
+    width: 100%; /* Full width for container */
+    padding: 0 100px; /* Add horizontal padding */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logo {
+    width: 60px;
+    height: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.nam {
+    text-decoration: none;
+    color: rgb(119, 0, 255); /* Default link color */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-menu {
+    display: flex; /* Displays items in a row */
+    list-style: none; /* Removes bullet points */
+    margin: 0; /* Resets default margin */
+    padding: 0; /* Resets default padding */
+}
+
+.nav-menu li {
+    margin: 1rem; /* Space between menu items */
+}
+
+.nav-menu .nam:hover {
+    padding: 8px;
+    background-color: #9305FF;
+    color: white;
+    border-radius: 5px;
+}
+
+/* about */
+#about{
+    background-image: url(images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    color: rgb(53, 52, 52); /* Text color */
+    font-family: 'Itim';
+    padding: 1rem;
+}
+.titlea{
+    display: flex;
+    margin: 100px;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.text-column h1{
+    font-size: 40px;
+}
+.text-column p{
+    font-size: 24px;
+    margin-right: 10px;
+}
+.text-column .info{
+    height: 28px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+.avatar{
+    width: 240px;
+    border-radius: 30px;
+}
+.title{
+    color: #9305FF;
+    text-align: center;
+}
+.title h1{
+    padding: 0;
+    font-size: 32px;
+    margin-bottom: -10px;
+}
+.title p{
+    padding: 0;
+    margin: 10px;
+    font-size: 24px;
+}
+#projects{
+    margin: 16px 100px;
+}
+.project-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between projects */
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+.proj1 {
+    flex-direction: row; /* Image on the left, details on the right */
+}
+
+.proj2 {
+    flex-direction: row-reverse; /* Image on the right, details on the left */
+}
+
+.project img {
+    width: 50%; /* Adjust as needed */
+    height: auto;
+    margin-right: 20px; /* Space between image and text */
+}
+
+.project-details {
+    width: 50%;
+    height: auto;
+    padding: 16px;
+    margin: 10px;
+    background-color: #ecd3ff;
+    border-radius: 50px 0 50px 0;
+}
+.project-details p{
+    margin: 12px;
+}
+.bcontainer {
+    display: flex; /* Use flexbox to align items horizontally */
+    margin-top: 10px; /* Optional: space above the brand images */
+}
+
+.project-details .bcontainer {
+    width: 70px;
+    margin: 5px 0 10px 10px;
+}
+#skills{
+  padding: 1px;
+    background: #EEEEEE;
+}
+.skill {
+    display: flex; /* Make the container a flexbox */
+    justify-content: center; /* Center the items horizontally */
+    margin-bottom: 20px;
+}
+
+.skill ul {
+    display: flex; /* Enable flex on the list */
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    list-style-type: none; /* Remove bullets */
+}
+
+.skill li {
+    margin: 10px; /* Space between items */
+}
+
+.brand {
+    height: 50px; /* Set a consistent height */
+    display: flex;
+    justify-content: center; /* Center the image inside the brand */
+    align-items: center; /* Center the image vertically */
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .nav-menu li {
+        margin: 0 0.5rem;
+    }
+
+    .project img {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .project-details {
+        max-width: 100%;
+        margin-top: 10px;
+    }
+
+    .titlea {
+        margin: 50px 20px;
+    }
+
+    .text-column h1 {
+        font-size: 28px;
+    }
+
+    .text-column p {
+        font-size: 18px;
+    }
+
+    .avatar {
+        width: 180px;
+    }
+
+    #projects {
+        margin: 16px 20px;
+    }
+
+    .brand {
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 0 10px;
+    }
+
+    .nav-menu {
+        flex-direction: row;
+        align-items: center;
+    }
+    .logo{
+        width: 50px;
+        height: 40px;
+    }
+    .project {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+
+    .project .proj {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .project-details {
+        width: 100%;
+    }
+    .avatar {
+        width: 150px;
+    }
+
+    .titlea {
+        margin: 50px 0 10px;
+    }
+
+    .text-column h1 {
+        font-size: 18px;
+    }
+
+    .text-column p {
+        font-size: 12px;
+    }
+    .text-column .info {
+        width: 15px;
+        height: 15px;
+    }
+    .title h1{
+        font-size: 18px;
+    }
+    .title p{
+        font-size: 14px;
+    }
+    #projects {
+        margin: 0px 10px;
+    }
+    .project-details p{
+        font-size: 10px;
+    }
+    .bcontainer .brandp{
+        width: 20px;
+        margin: 0 5px;
+    }
+    .brand {
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+    }
 }
